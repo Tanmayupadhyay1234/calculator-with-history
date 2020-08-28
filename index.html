@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	  <title>
+        Calculator
+    </title>
+    <script data-require="jquery@*" data-semver="1.9.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <link data-require="bootstrap-css@*" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link data-require="bootstrap@3.0.0" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <script data-require="bootstrap@3.0.0" data-semver="3.0.0" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+   <body id="body">
+	  <header>
+
+<div id="d1">
+<div >
+    <nav>
+	
+    <h1 id="t1" style="color:white">Tanmay's Calculator</h1>
+	
+       <ul>
+          <li><a href="index.html" class="hi">Calculator</a></li>
+          
+       </ul> 
+    </nav>
+</div>
+</div>
+</header>
+	  <div id='splash' class='splash'><h1>Calculator is Loading...</h1> <div class='lodding'><div class='value'></div></div> </div>
+    <div class="container">
+      <div id="calculator">
+		  <div id="gg">
+        <textarea id="calcScreen" class="form-control" rows="1" placeholder="0" disabled></textarea>
+        <br />
+        <button type="button" class="btn btn-default" disabled>&nbsp;</button>
+        <button type="button" class="btn btn-default" ><i class="icon icon-long-arrow-left"></i></button>
+        <button type="button" class="btn btn-default" onclick="calcScreen.value = '0'">CE</button>
+        <button type="button" class="btn btn-danger" onclick="calcScreen.value = '0'">C</button>
+        <br />
+        <button type="button" class="btn btn-default" onclick="calcScreen.value += '3.141592654'">&pi;</button>
+        <button type="button" class="btn btn-default">&radic;</button>
+        <button type="button" class="btn btn-default" onclick="addToTextArea('^2'); calcEval()">x<sup>2</sup></button>
+        <button type="button" class="btn btn-default" onclick="addToTextArea('^')">x<sup>y</sup></button>
+        <br />
+        <button type="button" class="btn btn-default" onclick="calcScreen.value += ' % '">%</button>
+        <button type="button" class="btn btn-default" onclick="addToTextArea('(')">(</button>
+        <button type="button" class="btn btn-default" onclick="addToTextArea(')')">)</button>
+        <button type="button" class="btn btn-default" onclick="addToTextArea('/')">&divide;</button>
+        <br />
+        <button type="button" class="btn btn-info" onclick="addToTextArea('7')">7</button>
+        <button type="button" class="btn btn-info" onclick="addToTextArea('8')">8</button>
+        <button type="button" class="btn btn-info" onclick="addToTextArea('9')">9</button>
+        <button type="button" class="btn btn-default" onclick="addToTextArea('*')">&times;</button>
+        <br />
+        <button type="button" class="btn btn-info" onclick="addToTextArea('4')">4</button>
+        <button type="button" class="btn btn-info" onclick="addToTextArea('5')">5</button>
+        <button type="button" class="btn btn-info" onclick="addToTextArea('6')">6</button>
+        <button type="button" class="btn btn-default" onclick="addToTextArea('-')">&minus;</button>
+        <br />
+        <button type="button" class="btn btn-info" onclick="addToTextArea('1')">1</button>
+        <button type="button" class="btn btn-info" onclick="addToTextArea('2')">2</button>
+        <button type="button" class="btn btn-info" onclick="addToTextArea('3')">3</button>
+        <button type="button" class="btn btn-default" onclick="addToTextArea('+')">+</button>
+        <br />
+        <button type="button" class="btn btn-default" onclick="addToTextArea('.')">.</button>
+        <button type="button" class="btn btn-info" onclick="addToTextArea('0')">0</button>
+        <button type="button" class="btn btn-primary" onclick="calcEval()">=</button>
+        <br />
+      </div>
+		  
+    </div>
+		
+    <div class="container">
+      <div class="well">
+        <h2>Calculator history</h2>
+        <ol id="history">
+        </ol>
+		  <br/>
+		<button type="button" class="btn btn-primary">
+		Get Calculator History
+		</button>	
+    </div>
+		
+	
+		
+<script>var screen = document.getElementById("screen");	  
+function splash() {
+    var splashContainer = document.getElementById('splash');
+    splashContainer.style.display = 'none';
+}
+setTimeout(splash,3000);
+
+
+var check =document.getElementById("check");
+if(check.checked){
+    console.log("chek");
+}
+
+</script>
+	  </div>
+  </body>
+
+</html>
